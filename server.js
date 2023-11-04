@@ -18,7 +18,7 @@ const DATABASE_URL = process.env.DATABASE_URL;
 console.log(" Running");
 if (process.env.ENVIRONMENT === "production") {
     app.use(cors({
-        origin: "https://jobby-job-front-ny6u.vercel.app",
+        origin: "https://jobby-job-front-ny6u-3s7rlbqtk-joyboycr7.vercel.app",
         credentials: true,
     }));
 }
