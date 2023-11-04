@@ -12,6 +12,8 @@ router.get("/", isLoggedIn, async (req, res) => {
     }
     catch (error) {
         console.log("falsds")
+        console.log(error)
+        res.json(error)
         res.status(400).json({ error });
     }
 });
