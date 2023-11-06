@@ -2,6 +2,7 @@ import express from "express";
 import Jobs from "../models/job.js";
 import isLoggedIn from "../utilss/isloggedin.js";
 const router = express.Router();
+
 router.get("/", isLoggedIn, async (req, res) => {
     console.log("door")
     try {

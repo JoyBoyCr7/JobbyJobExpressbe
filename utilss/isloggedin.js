@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 async function isLoggedIn(req, res, next) {
     if (req.cookies.token) {
+        console.log("got cookie")
         // if there is a cookie, try to decode it
         const payload = await jwt.verify(req.cookies.token, process.env.SECRET);
         // store the payload in the request
@@ -10,6 +11,7 @@ async function isLoggedIn(req, res, next) {
     }
     else {
         // if there is no cookie, return an error
+        console.log("got here")
         res.status(400).json({ error: "You are not authorized" });
     }
     // try {
