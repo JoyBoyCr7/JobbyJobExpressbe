@@ -16,7 +16,6 @@ const DATABASE_URL = process.env.DATABASE_URL;
 // .on('error', (error) => console.log(error));
 // middleware
 console.log(" Running");
-app.set("trust proxy", 1);
 if (process.env.ENVIRONMENT === "production") {
     app.use(cors({
         origin: "https://jobby-job-front-ny6u.vercel.app",
