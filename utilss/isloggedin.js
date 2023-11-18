@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 async function isLoggedIn(req, res, next) {
     if (req.cookies.token) {
         console.log("got cookie")
+        console.log(req.cookies)
         // if there is a cookie, try to decode it
         const payload = await jwt.verify(req.cookies.token, process.env.SECRET);
         // store the payload in the request
